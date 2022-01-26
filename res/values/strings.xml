@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">ShareToChrome</string>
+  <string name="share_name">Chrome</string>
+  <string name="toast_unsupported">Text must be URL</string>
+  <string name="toast_not_installed">Chrome is not installed</string>
+</resources>

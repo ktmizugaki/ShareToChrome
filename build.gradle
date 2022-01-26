@@ -1,0 +1,56 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.1'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId 'hm.orz.ktmizugaki.android.sharetochrome'
+        minSdkVersion 9
+        targetSdkVersion 28
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+        androidTest.setRoot('tests')
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
+        }
+        debug {
+            applicationIdSuffix ".debug"
+        }
+    }
+
+    lintOptions {
+        disable 'IconMissingDensityFolder', 'RtlEnabled', 'RtlHardcoded', 'RtlSymmetry'
+    }
+}

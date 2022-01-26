@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Chromeへ共有</string>
+    <string name="share_name">Chrome</string>
+    <string name="toast_unsupported">URL文字列が必要です</string>
+    <string name="toast_not_installed">Chromeが見つかりません</string>
+</resources>
